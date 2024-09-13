@@ -1,30 +1,54 @@
-#include<stdio.h.>
+#include<stdio.h>
+
+
 int main()
 {
-	int x = 0;
-	float a = 0;
+	int year = 0;
+	int month = 0;
+	int date = 0;
+	int day = 0;
 
-	printf("请输入你需要存入的金额（万元）\n");
-
-	scanf_s("%f", &a);
+		printf("请输入 年 月 日。\n");
+		scanf_s(" %d %d %d", &year, &month, &day);
 	
-	for (float i=a ; i >= 0; x++)
+	if (month <= 12&&day<=31)
 	{
-		
+		switch (month)
+		{
+			case 12:date += 31;
+			case 11:date += 30;
+			case 10:date += 31;
+			case 9:date += 30;
+			case 8:date += 31;
+			case 7:date += 31;
+			case 6:date += 30;
+			case 5:date += 31;
+			case 4:date += 31;
 
-		i *= 1.08;
-		i -= 10;
-		
+			case 3:date += 31;
+
+			case 2:
+				if (year % 4 == 0)
+			{
+				date += 29;
+			}
+				else
+			{
+				date += 28;
+			}
+			case 1:date += 31;
+			printf("%d年%d月%d日是%d年的第%d天。\n", year, month, day, year, date);
+		}
 	}
-	printf("需要%d年才可以取完。\n", x);
-
-	return 0;
+		
+else
+{
+	printf("请输入正确的 年 月 日。");
+	}
+return 0;
 }
 
 
-
-
- 
 
 
 
