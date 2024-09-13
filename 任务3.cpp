@@ -8,7 +8,7 @@ int main()
 	int date = 0;
 	int day = 0;
 
-		printf("ÇëÊäÈë Äê ÔÂ ÈÕ¡£\n");
+		printf("è¯·è¾“å…¥ å¹´ æœˆ æ—¥ã€‚\n");
 		scanf_s(" %d %d %d", &year, &month, &day);
 	
 	if (month <= 12&&day<=31)
@@ -37,13 +37,13 @@ int main()
 				date += 28;
 			}
 			case 1:date += 31;
-			printf("%dÄê%dÔÂ%dÈÕÊÇ%dÄêµÄµÚ%dÌì¡£\n", year, month, day, year, date);
+			printf("%då¹´%dæœˆ%dæ—¥æ˜¯%då¹´çš„ç¬¬%då¤©ã€‚\n", year, month, day, year, date);
 		}
 	}
 		
 else
 {
-	printf("ÇëÊäÈëÕıÈ·µÄ Äê ÔÂ ÈÕ¡£");
+	printf("è¯·è¾“å…¥æ­£ç¡®çš„ å¹´ æœˆ æ—¥ã€‚");
 	}
 return 0;
 }
